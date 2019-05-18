@@ -1,0 +1,10 @@
+<br />
+<span><button (click)="decrement()">Decrement</button></span>
+<span> {{ counter$ | async }}</span>
+<span><button (click)="increment()">Increment</button></span>
+
+<br />
+<button (click)="reset()">Reset</button>
+<br />
+<input #addInput type="text" />
+<button (click)="addValue(addInput.value)">add</button>
