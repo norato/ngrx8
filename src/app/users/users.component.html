@@ -1,0 +1,11 @@
+<table>
+  <tr>
+    <th>{{ 'id' | uppercase }}</th>
+    <th>{{ 'name' | uppercase }}</th>
+    <th>{{ 'username' | uppercase }}</th>
+    <th>{{ 'email' | uppercase }}</th>
+  </tr>
+  <tr *ngFor="let user of users$ | async">
+    <td *ngFor="let field of userFields">{{ user[field] }}</td>
+  </tr>
+</table>
