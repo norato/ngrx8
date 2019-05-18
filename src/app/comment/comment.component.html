@@ -1,0 +1,8 @@
+<table>
+  <tr>
+    <th *ngFor="let field of fields">{{ field | uppercase }}</th>
+  </tr>
+  <tr *ngFor="let comment of comments$ | async">
+    <td *ngFor="let field of fields">{{ comment[field] }}</td>
+  </tr>
+</table>

@@ -19,6 +19,6 @@ export class PostsComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.postService.getAll();
+    this.postService.getWithQuery('userId=1');
   }
 }

@@ -19,18 +19,22 @@ import {
 } from './store';
 import { UsersComponent } from './users/users.component';
 import { PostsComponent } from './posts/posts.component';
+import { EntityStoreModule } from './store/entity-store.module';
+import { CommentComponent } from './comment/comment.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CounterComponent,
     UsersComponent,
-    PostsComponent
+    PostsComponent,
+    CommentComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    EntityStoreModule,
     FormsModule,
     StoreModule.forRoot(reducers, { metaReducers }),
     EffectsModule.forRoot(effects),

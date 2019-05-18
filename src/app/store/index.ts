@@ -21,7 +21,8 @@ export const metaReducers: MetaReducer<AppState>[] = !environment.production
 export const effects = [UserEffects];
 
 const entityMetadata: EntityMetadataMap = {
-  Post: {}
+  Post: {},
+  Comments: {}
 };
 
 export const entityConfig = {

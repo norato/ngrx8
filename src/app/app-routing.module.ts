@@ -1,13 +1,15 @@
-import { CounterComponent } from './counter/counter.component';
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import { UsersComponent } from './users/users.component';
+import { RouterModule, Routes } from '@angular/router';
+import { CommentComponent } from './comment/comment.component';
+import { CounterComponent } from './counter/counter.component';
 import { PostsComponent } from './posts/posts.component';
+import { UsersComponent } from './users/users.component';
 
 const routes: Routes = [
   { path: 'counter', component: CounterComponent },
   { path: 'users', component: UsersComponent },
-  { path: 'posts', component: PostsComponent }
+  { path: 'posts', component: PostsComponent },
+  { path: 'comments', component: CommentComponent }
 ];
 
 @NgModule({
