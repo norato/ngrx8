@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { EntityCollectionServiceFactory } from '@ngrx/data';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'ngrx8';
+  constructor(
+    private readonly entityCollectionServiceFactory: EntityCollectionServiceFactory
+  ) {
+    const foobar = this.entityCollectionServiceFactory.create('Todo');
+    foobar.getAll();
+  }
 }
