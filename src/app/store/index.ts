@@ -1,7 +1,8 @@
+import { EntityMetadataMap, DefaultDataServiceConfig } from '@ngrx/data';
 import { ActionReducerMap, MetaReducer } from '@ngrx/store';
 import { environment } from '../../environments/environment';
 import { CounterReducer } from './counter';
-import { UserState, UserReducer, UserEffects } from './user';
+import { UserEffects, UserReducer, UserState } from './user';
 
 export interface AppState {
   counter: number;
@@ -18,3 +19,15 @@ export const metaReducers: MetaReducer<AppState>[] = !environment.production
   : [];
 
 export const effects = [UserEffects];
+
+const entityMetadata: EntityMetadataMap = {
+  Post: {}
+};
+
+export const entityConfig = {
+  entityMetadata
+};
+
+export const defaultDataServiceConfig: DefaultDataServiceConfig = {
+  root: environment.baseUrl
+};
