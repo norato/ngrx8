@@ -23,7 +23,8 @@ export const effects = [UserEffects];
 export const entityMetadata: EntityMetadataMap = {
   Post: {},
   Comment: {},
-  Todo: {}
+  Todo: {},
+  'Foo/Bar': {}
 };
 
 export const entityConfig = {

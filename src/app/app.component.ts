@@ -10,7 +10,9 @@ export class AppComponent {
   constructor(
     private readonly entityCollectionServiceFactory: EntityCollectionServiceFactory
   ) {
-    const foobar = this.entityCollectionServiceFactory.create('Todo');
+    const todo = this.entityCollectionServiceFactory.create('Todo');
+    const foobar = this.entityCollectionServiceFactory.create('Foo/Bar');
+    todo.getAll();
     foobar.getAll();
   }
 }
