@@ -15,9 +15,9 @@ export class AppComponent implements OnInit {
     private readonly state$: Store<AppState>
   ) {
     const todo = this.entityCollectionServiceFactory.create('Todo');
-    const foobar = this.entityCollectionServiceFactory.create('Foo/Bar');
+    const foobar = this.entityCollectionServiceFactory.create('FooBar');
     todo.getAll();
-    // foobar.getAll();
+    foobar.getAll();
 
     this.state$.dispatch(new LoadPhotos());
   }

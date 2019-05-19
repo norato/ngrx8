@@ -28,7 +28,7 @@ export const entityMetadata: EntityMetadataMap = {
   Post: {},
   Comment: {},
   Todo: {},
-  'Foo/Bar': {}
+  FooBar: {}
 };
 
 export const entityConfig = {
@@ -36,5 +36,11 @@ export const entityConfig = {
 };
 
 export const defaultDataServiceConfig: DefaultDataServiceConfig = {
-  root: environment.baseUrl
+  root: environment.baseUrl,
+  entityHttpResourceUrls: {
+    FooBar: {
+      entityResourceUrl: environment.baseUrl + '/comments',
+      collectionResourceUrl: environment.baseUrl + '/comments'
+    }
+  }
 };
