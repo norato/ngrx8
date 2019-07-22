@@ -1,4 +1,8 @@
-import { EntityMetadataMap, DefaultDataServiceConfig } from '@ngrx/data';
+import {
+  EntityMetadataMap,
+  DefaultDataServiceConfig,
+  EntityDataModuleConfig
+} from '@ngrx/data';
 import { ActionReducerMap, MetaReducer } from '@ngrx/store';
 import { environment } from '../../environments/environment';
 import { CounterReducer } from './counter';
@@ -31,7 +35,7 @@ export const entityMetadata: EntityMetadataMap = {
   FooBar: {}
 };
 
-export const entityConfig = {
+export const entityConfig: EntityDataModuleConfig = {
   entityMetadata
 };
 
